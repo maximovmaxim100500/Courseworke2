@@ -21,7 +21,7 @@ public class JavaQuestionService implements QuestionService{
     }
 
     @Override
-    public Question remmove(Question question) {
+    public Question remove(Question question) {
         storage.remove(question);
         return question;
     }
@@ -41,6 +41,6 @@ public class JavaQuestionService implements QuestionService{
             }
             i++;
         }
-        return null;
+        throw new NotFountQuestionsException();
     }
 }
